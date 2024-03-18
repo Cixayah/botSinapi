@@ -12,7 +12,7 @@ mesAno = "202311"
 diretorio_atual = os.path.dirname(os.path.abspath(__file__))
 
 # Caminho para o ChromeDriver no diretório atual
-chrome_driver_path = os.path.join(diretorio_atual, "../chromedriver.exe")
+chrome_driver_path = os.path.join(diretorio_atual, "chromedriver.exe")
 
 # Configurar as opções do Chrome
 chrome_options = webdriver.ChromeOptions()
