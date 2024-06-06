@@ -6,7 +6,7 @@ import time
 import os
 
 # Variável de data
-mesAno = "202311"
+mesAno = "202404"
 
 # Obter o diretório atual do script
 diretorio_atual = os.path.dirname(os.path.abspath(__file__))
@@ -46,7 +46,7 @@ for estado in estados:
     # Localize e clique no botão de busca usando o XPath fornecido
     search_button = driver.find_element(By.XPATH, "/html/body/form/div[4]/div/div/div[3]/div/span/div[1]/div[2]/div/div/div[1]/div[1]/div[1]/div/button/i")
     search_button.click()
-    time.sleep(5)
+    time.sleep(15)
     # Aguardar até que a página de resultados esteja completamente carregada (você pode ajustar o tempo limite)
     wait = WebDriverWait(driver, 10)
     wait.until(EC.presence_of_element_located((By.XPATH, f"//a[contains(@href, '{termo_de_busca}')]")))
@@ -57,7 +57,7 @@ for estado in estados:
     # Iterar sobre os links e efetuar um clique com um intervalo de 1 segundo entre cada um
     for link in links:
         link.click()
-        time.sleep(1)
+        time.sleep(10)
 
 # Fechar o navegador após a automação
 time.sleep(15)
